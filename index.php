@@ -23,10 +23,29 @@ $search = Usuario::search("r");
 echo json_encode($search);
 */
 
-/*carrega usuario usando login e sehanha*/
+/*carrega usuario usando login e sehanha
 $usuario = new Usuario();
 $usuario->login("root", "12345");
-
 echo $usuario;
+*/
 
+/*insere usuario atraves do método insert
+$aluno = new Usuario();
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@lun0");
+$aluno->insert();
+echo $aluno;
+*/
+
+/*insere usuario diretamente através do método __construct
+$aluno = new Usuario("rafael", "R4F43L");
+$aluno->insert();
+echo $aluno;
+*/
+
+/*update de usuario*/
+$usuario = new Usuario();
+$usuario->loadById(6);
+$usuario->update("admin", "!@#$%");
+echo $usuario;
 ?>
