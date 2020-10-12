@@ -43,9 +43,17 @@ $aluno->insert();
 echo $aluno;
 */
 
-/*update de usuario*/
+/*update de usuario
 $usuario = new Usuario();
 $usuario->loadById(6);
 $usuario->update("admin", "!@#$%");
 echo $usuario;
+*/
+
+/*deletar dado do banco de dados*/
+$usuario = new Usuario();
+$usuario->loadById(7);
+$usuario->delete();
+echo $usuario;
+
 ?>
